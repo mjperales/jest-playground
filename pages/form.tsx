@@ -20,8 +20,22 @@ export default function Form() {
       <h1>Example Form</h1>
 
       <FormStyled onSubmit={handleOnSubmit}>
-        <InputText placeholder="Jane Doe" type="text" label="Name" />
-        <InputText id="email" icon="left" label="Email">
+        <InputText
+          placeholder="Jane Doe"
+          type="text"
+          label="Name"
+          id={"name"}
+          name={"name"}
+          crossOrigin={undefined}
+        />
+        <InputText
+          type="text"
+          id="email"
+          icon="left"
+          label="Email"
+          name={"email"}
+          crossOrigin={undefined}
+        >
           <Icon label="email">
             <Email />
           </Icon>
