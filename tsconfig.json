@@ -1,12 +1,12 @@
 {
   "ts-node": {
     "compilerOptions": {
-      "module": "CommonJS"
+      "module": "commonjs"
     }
   },
   "compilerOptions": {
     "jsx": "preserve",
-    "target": "esnext",
+    "target": "es6",
     "module": "commonjs",
     "strict": true,
     "noEmit": true,
@@ -24,8 +24,20 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/components/*": ["components/*"],
+      "@/pages/*": ["pages/*"],
+      "@/styles/*": ["styles/*"]
+    }
   },
-  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "jest.config.ts"
+  ],
   "exclude": ["node_modules"]
 }
