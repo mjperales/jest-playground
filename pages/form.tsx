@@ -1,14 +1,7 @@
 import React from "react";
 import { InputText, Icon, styled, Button } from "@washingtonpost/wpds-ui-kit";
 import { Email } from "@washingtonpost/wpds-assets";
-
-const Wrapper = styled("div", {
-  display: "flex",
-  flexFlow: "column nowrap",
-  justifyContent: "space-around",
-  alignItems: "center",
-  alignContent: "center",
-});
+import { Wrapper } from "./styles/StyledComponents.styles";
 
 const FormStyled = styled("form", {
   display: "flex",

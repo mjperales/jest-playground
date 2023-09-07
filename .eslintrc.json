@@ -2,6 +2,7 @@
   "root": true,
   "extends": [
     "eslint:recommended",
+    "next",
     "plugin:jsx-a11y/recommended",
     "plugin:prettier/recommended",
     "prettier"
