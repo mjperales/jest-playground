@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { InputText, Icon, styled, Button } from "@washingtonpost/wpds-ui-kit";
 import { Email } from "@washingtonpost/wpds-assets";
 import { Wrapper } from "./styles/StyledComponents.styles";
@@ -9,12 +9,20 @@ const FormStyled = styled("form", {
   gap: "$050",
 });
 
-const handleOnSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-  event.preventDefault();
-  console.log("submit");
-};
-
 export default function Form() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const handleOnChangeName = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setName(event.target.value);
+  };
+  const handleOnChangeEmail = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(event.target.value);
+  };
+  const handleOnSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    console.log(name);
+    console.log(email);
+  };
   return (
     <Wrapper>
       <h1>Example Form</h1>
@@ -26,14 +34,18 @@ export default function Form() {
           label="Name"
           id={"name"}
           name={"name"}
+          value={name}
+          onChange={handleOnChangeName}
           crossOrigin={undefined}
         />
         <InputText
-          type="text"
+          type="email"
           id="email"
           icon="left"
           label="Email"
           name={"email"}
+          value={email}
+          onChange={handleOnChangeEmail}
           crossOrigin={undefined}
         >
           <Icon label="email">
