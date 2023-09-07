@@ -3,6 +3,7 @@
   "extends": [
     "eslint:recommended",
     "next",
+    "plugin:markdown/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:prettier/recommended",
     "prettier"
