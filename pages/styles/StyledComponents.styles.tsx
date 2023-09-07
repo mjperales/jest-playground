@@ -7,3 +7,9 @@ export const Wrapper = styled("div", {
   alignItems: "center",
   alignContent: "center",
 });
+
+export const FormStyled = styled("form", {
+  display: "flex",
+  flexDirection: "column",
+  gap: "$050",
+});

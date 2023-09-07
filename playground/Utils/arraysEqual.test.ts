@@ -1,13 +1,13 @@
 import arraysEqual from "./arraysEqual";
 
 describe("arraysEqual()", () => {
-  it("Expect arrays to match even if string are in a different order", () => {
+  it("Expect arrays to match even if strings are in a different order", () => {
     // Diff order
     expect(arraysEqual(["III", "KLK", "&&&"], ["KLK", "III", "&&&"])).toBe(
       true
     );
   });
-  it("Expect arrays not to match when they are different size", () => {
+  it("Expect arrays not to match when they are different sizes", () => {
     // Diff size
     expect(arraysEqual(["KLK", "&&&"], ["KLK", "III", "&&&"])).toBe(false);
   });
