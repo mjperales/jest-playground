@@ -13,14 +13,8 @@ const createJestConfig = nextJest({
 const config: Config = {
   collectCoverage: true,
   collectCoverageFrom: [
-    "!**/*.d.ts",
-    "!**/node_modules/**",
-    "!<rootDir>/out/**",
-    "!<rootDir>/.next/**",
-    "!<rootDir>/*.config.js",
-    "!<rootDir>/coverage/**",
-    "<rootDir>/playground/Utils/**/*.{js,jsx,ts,tsx}",
-    "<rootDir>/pages/components/**/*.{js,jsx,ts,tsx}",
+    "<rootDir>/playground/Utils/**/*.{js,ts,tsx}",
+    "<rootDir>/pages/components/**/*.{js,ts,tsx}",
   ],
   coverageThreshold: {
     global: {
@@ -38,14 +32,6 @@ const config: Config = {
   },
   preset: "ts-jest",
   setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
-  transform: {
-    "^.+\\.tsx?$": [
-      "ts-jest",
-      {
-        isolatedModules: true,
-      },
-    ],
-  },
   testEnvironment: "jest-environment-jsdom",
   testPathIgnorePatterns: ["<rootDir>/node_modules/", "<rootDir>/.next/"],
 };
