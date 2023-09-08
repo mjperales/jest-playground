@@ -3,7 +3,11 @@ import { InputText, Icon, Button } from "@washingtonpost/wpds-ui-kit";
 import { Email } from "@washingtonpost/wpds-assets";
 import { Wrapper, FormStyled } from "../../styles/StyledComponents.styles";
 
-export default function Form() {
+export default function Form({
+  onSubmitHandler,
+}: {
+  onSubmitHandler: (name: string, email: string) => void;
+}) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
@@ -15,6 +19,7 @@ export default function Form() {
   };
   const handleOnSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    onSubmitHandler(name, email);
     console.log(name);
     console.log(email);
   };
