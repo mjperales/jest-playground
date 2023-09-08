@@ -2,7 +2,7 @@
   "root": true,
   "extends": [
     "eslint:recommended",
-    "next",
+    "next/core-web-vitals",
     "plugin:markdown/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:prettier/recommended",
