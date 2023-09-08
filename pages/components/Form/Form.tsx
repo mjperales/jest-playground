@@ -20,8 +20,7 @@ export default function Form({
   const handleOnSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     onSubmitHandler(name, email);
-    console.log(name);
-    console.log(email);
+    console.log(name, email);
   };
   return (
     <Wrapper>
