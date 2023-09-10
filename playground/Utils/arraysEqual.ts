@@ -6,7 +6,5 @@
  * @returns bool Returns true if arrays match
  */
 export default function arraysEqual(array1: string[], array2: string[]) {
-  return (
-    array1.length === array2.length && array1.every((el) => array2.includes(el))
-  );
+  // find out what goes here
 }

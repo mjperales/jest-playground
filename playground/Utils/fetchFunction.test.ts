@@ -1,5 +1,4 @@
 import fetchFunction from "./fetchFunction";
-// import fetch from "node-fetch";
 import { IStories } from "../../types/InterfaceTypes";
 
 const mockData = {
@@ -37,47 +36,11 @@ describe("fetchFunction()", () => {
   afterAll(() => jest.restoreAllMocks());
   it("successfully gets a response", async () => {
     const data = await fetchFunction<IStories>(
-      "https://testing.com/api/search",
+      "https://localhost:3000/api/search",
       "8776666"
     );
     expect(data).toStrictEqual(mockData);
   });
 
   // Test for bad api response
-  // Test for an error. Are they the same thing?
 });
-
-// jest.mock("node-fetch");
-// const nodeFetchMock = jest.mocked(fetch);
-
-// describe("fetchFunction() using Jest Mocks", () => {
-//   afterEach(() => {
-//     jest.clearAllMocks();
-//   });
-//   afterAll(() => jest.restoreAllMocks());
-//   // how would we do that?
-//   it("uses Jest mocks instead", async () => {
-//     nodeFetchMock.mockImplementation(() =>
-//       Promise.resolve({
-//         ok: true,
-//         json: () =>
-//           Promise.resolve({
-//             data: {
-//               projects: [{ name: "Project Name" }],
-//               sections: [{ name: "Section  Name" }],
-//             },
-//           }),
-//       })
-//     );
-//     const data = await fetchFunction<IStories>(
-//       "https://anotherlink.com/",
-//       "8776666"
-//     );
-//     expect(data).toStrictEqual({
-//       data: {
-//         projects: [{ name: "Project Name" }],
-//         sections: [{ name: "Section  Name" }],
-//       },
-//     });
-//   });
-// });
