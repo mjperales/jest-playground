@@ -22,6 +22,7 @@ export default async function fetchFunction<T>(
 
     if (!response.ok) {
       console.error(response);
+      throw new Error();
     }
     return response.json() as Promise<T>;
   } catch (err) {

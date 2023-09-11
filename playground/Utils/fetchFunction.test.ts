@@ -42,5 +42,5 @@ describe("fetchFunction()", () => {
     expect(data).toStrictEqual(mockData);
   });
 
-  // Test for bad api response
+  // TODO: Test for bad api response
 });

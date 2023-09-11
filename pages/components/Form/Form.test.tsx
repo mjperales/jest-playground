@@ -22,7 +22,7 @@ describe("<Form />", () => {
   it("Successfully updates the name field", async () => {});
   it("Successfully updates the email field", () => {});
   it("Successfully calls handleOnSubmit", () => {
-    // use jest.fn(). Example: line 48
+    // use jest.fn(). Example in test below
   });
   // TODO: fix test
   it("Successfully clears inputs after submit", () => {
