@@ -10,3 +10,9 @@
 
 - Run `npm run dev`
 - Go to `/form`
+
+## Run Tests
+
+- Run `npm run test:watch` to run tests in background
+- Run `npm run test ./filePath` to run single test
+- Run `npm run test` to run all tests once
