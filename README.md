@@ -23,7 +23,7 @@
 
 2. `Form.test.tsx` is missing some tests.
 
-- Figure out if entire form renders correctly. The first tests on checks if the submit button is in the document
+- Figure out if entire form renders correctly. The first test is only checking if the submit button is in the document. It's missing the name and email inputs.
 
 - Write a test to make sure the name field works correctly
 - Write a test to make sure the email field works correctly
