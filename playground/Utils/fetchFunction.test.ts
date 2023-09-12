@@ -29,6 +29,7 @@ const mockData = {
   count: 1,
 };
 
+// MSW Docs for different responses: https://mswjs.io/docs/getting-started/mocks/rest-api
 describe("fetchFunction()", () => {
   afterEach(() => {
     jest.clearAllMocks();

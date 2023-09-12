@@ -6,5 +6,6 @@
  * @returns bool Returns true if arrays match
  */
 export default function arraysEqual(array1: string[], array2: string[]) {
-  // find out what goes here
+  // TODO: Write a function to find out if two arrays of strings match
+  // Make sure all tests pass `arraysEqual.test.ts`
 }
