@@ -34,7 +34,11 @@ describe("<Form />", () => {
       target: { value: "m.j.perales@gmail.com" },
     });
     fireEvent.click(screen.getByRole("button", { name: /submit/i }));
-    expect(screen.getByRole("textbox", { name: /name/i }).value).toBe("");
-    expect(screen.getByRole("textbox", { name: /email/i }).value).toBe("");
+    expect(
+      screen.getByRole<HTMLInputElement>("textbox", { name: /name/i }).value
+    ).toBe("");
+    expect(
+      screen.getByRole<HTMLInputElement>("textbox", { name: /email/i }).value
+    ).toBe("");
   });
 });
