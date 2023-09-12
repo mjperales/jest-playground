@@ -1,6 +1,19 @@
 import { rest } from "msw";
 export const handlers = [
   rest.get("https://localhost:3000/api/search", (req, res, ctx) => {
+    const queryString = req.url.searchParams.get("test");
+
+    if (queryString === "reject") {
+      return res(ctx.status(500));
+    }
+
+    if (queryString === "okfalse") {
+      return res(
+        ctx.status(403, "Bad Request"),
+        ctx.json({ ok: false, message: "Bad Request" })
+      );
+    }
+
     return res(
       ctx.status(200),
       ctx.json({

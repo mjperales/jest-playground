@@ -7,4 +7,7 @@
  */
 export default function arraysEqual(array1: string[], array2: string[]) {
   // find out what goes here
+  return (
+    array1.length === array2.length && array1.every((el) => array2.includes(el))
+  );
 }

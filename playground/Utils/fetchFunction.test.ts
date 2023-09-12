@@ -42,5 +42,20 @@ describe("fetchFunction()", () => {
     expect(data).toStrictEqual(mockData);
   });
 
-  // TODO: Test for bad api response
+  it("Response is not ok", async () => {
+    await expect(
+      fetchFunction<IStories>(
+        "https://localhost:3000/api/search?test=okfalse",
+        "8776666"
+      )
+    ).rejects.toThrow();
+  });
+  it("Response is rejected", async () => {
+    await expect(
+      fetchFunction<IStories>(
+        "https://localhost:3000/api/search?test=reject",
+        "8776666"
+      )
+    ).rejects.toThrow("Error with API call");
+  });
 });
