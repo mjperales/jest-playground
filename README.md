@@ -19,9 +19,9 @@
 
 # Exercises
 
-1. `arraysEqual.test.ts` includes tests but they are all failing. Go to `arraysEqual.ts` and figure out what goes inside that function.
+1. `./playground/Utils/arraysEqual.test.ts` includes tests but they are all failing. Go to `arraysEqual.ts` and figure out what goes inside that function.
 
-2. `Form.test.tsx` is missing some tests.
+2. `./pages/components/Form/Form.test.tsx` is missing some tests.
 
 - Figure out if entire form renders correctly. The first test is only checking if the submit button is in the document. It's missing the name and email inputs.
 
@@ -30,7 +30,7 @@
 - Write a test to make sure handleOnSubmit is called
 - The last test is failing. Figure out how to fix it
 
-3. `fetchFunction.test.ts` is missing a test
+3. `./playground/Utils/fetchFunction.test.ts` is missing a test
 
 - Write a test to check if an error is thrown
 
